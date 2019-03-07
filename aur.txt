@@ -1,0 +1,5 @@
+ttf-font-icons
+visual-studio-code-bin
+skypeforlinux-stable-bin
+jetbrains-toolbox
+nerd-fonts-complete
