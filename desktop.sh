@@ -66,6 +66,10 @@ NEW_PASSWORD=pass123
 repopkgs=$(cat "${curp}/repo.txt" | grep  -v '^#\|^$' | tr '\n' ' ')
 arch-chroot "$AAI_MNT" << EOF
 set -o errexit
+
+# first update db
+pacman -Sy
+
 ln -sf /usr/share/zoneinfo/Europe/Sofia /etc/localtime
 hwclock --systohc
 # setup locales
@@ -177,7 +181,7 @@ EOF
 # ssh access
 mkdir -pv "$AAI_MNT"/root/.ssh
 chmod 0700 "$AAI_MNT"/root/.ssh
-[ -f "$curp/root_authorized_keys"] && \
+[ -f "$curp/root_authorized_keys" ] && \
     cp "$curp/root_authorized_keys" "$AAI_MNT"/root/.ssh/authorized_keys
 
 # TODO: $HOME/.cache seems to be owned by root
