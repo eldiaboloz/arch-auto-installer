@@ -156,3 +156,9 @@ zenity
 
 # laptop
 acpi
+
+# new
+electrum
+xorg-xwininfo
+code
+wmctrl
