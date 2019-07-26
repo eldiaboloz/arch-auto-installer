@@ -12,6 +12,7 @@ certbot
 cronie
 curl
 dialog
+dmidecode
 docker
 docker-compose
 fzf
@@ -119,6 +120,7 @@ faenza-icon-theme
 gnome-icon-theme
 gnome-icon-theme-symbolic
 gnome-themes-extra
+gtk-xfce-engine
 hicolor-icon-theme
 kiconthemes
 lxappearance

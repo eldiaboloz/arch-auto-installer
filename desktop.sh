@@ -172,7 +172,7 @@ sed -i 's#/usr/bin/sudo#/usr/local/bin/sudo#' \$HOME/.config/trizen/trizen.conf
 # @TODO check which of these is required for ok fonts
 trizen --noconfirm -S $aurpkgs
 
-cd /work/dev/personal/i3wmonarch && ./bin/create_symlinks.sh && git submodule update --init --recursive
+cd /work/dev/personal/i3wmonarch && ./scripts/i3wm/create_symlinks.sh && git submodule update --init --recursive
 cd /work/dev/personal/i3wmonarch/github.com/nonpop/xkblayout-state && make
 cd /work/dev/personal/i3wmonarch/github.com/powerline/fonts && ./install.sh
 
