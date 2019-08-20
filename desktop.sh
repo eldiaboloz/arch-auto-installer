@@ -89,7 +89,9 @@ sed -i "s,PKGEXT='.pkg.tar.xz',PKGEXT='.pkg.tar',g" /etc/makepkg.conf
 # swap setup
 echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.d/99-sysctl.conf
 echo "fs.file-max=131072" >> /etc/sysctl.d/99-sysctl.conf
-echo "vm.swappiness=20" >> /etc/sysctl.d/99-sysctl.conf
+echo "net.bridge.bridge-nf-call-ip6tables=0" >> /etc/sysctl.d/99-sysctl.conf
+echo "net.bridge.bridge-nf-call-iptables=0" >> /etc/sysctl.d/99-sysctl.conf
+echo "net.bridge.bridge-nf-call-arptables=0" >> /etc/sysctl.d/99-sysctl.conf
 
 # disable swap for now
 #fallocate -l 16G /swapfile

@@ -13,8 +13,10 @@ cronie
 curl
 dialog
 dmidecode
+dnsmasq
 docker
 docker-compose
+ebtables
 fzf
 git
 gnome-keyring
@@ -37,6 +39,7 @@ jq
 lastpass-cli
 libqalculate
 libxml2
+libvirt
 lm_sensors
 net-tools
 nfs-utils
@@ -56,6 +59,7 @@ tcpdump
 the_silver_searcher
 tmux
 traceroute
+transmission-cli
 unrar
 vim
 wget
