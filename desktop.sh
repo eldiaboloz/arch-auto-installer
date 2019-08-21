@@ -107,10 +107,20 @@ groupadd sudo
 usermod -aG video,audio,scanner,lp,sudo,docker $AAI_USER
 fi
 
+# ssh daemon
 systemctl enable sshd.service
+
+# dhcp client on all interfaaces
 systemctl enable dhcpcd.service
+
+# bluetooth service
 systemctl enable bluetooth.service
+
+# cron service
 systemctl enable cronie.service
+
+# ntp client using systemd
+systemctl enable systemd-timesyncd.service
 
 mkdir -pv /work
 chown $AAI_USER:$AAI_USER /work
