@@ -104,7 +104,7 @@ pacman --noconfirm -S $repopkgs
 if [ ! -d "/home/$AAI_USER" ]; then
 useradd --create-home "$AAI_USER" --shell /usr/bin/zsh
 groupadd sudo
-usermod -aG video,audio,scanner,lp,sudo,docker $AAI_USER
+usermod -aG video,audio,scanner,lp,sudo $AAI_USER
 fi
 
 # ssh daemon
@@ -182,7 +182,7 @@ sed -i 's#/tmp/trizen-$AAI_USER#\$ENV{HOME}/.cache/trizen#' \$HOME/.config/trize
 sed -i 's#/usr/bin/sudo#/usr/local/bin/sudo#' \$HOME/.config/trizen/trizen.conf
 
 # @TODO check which of these is required for ok fonts
-trizen --noconfirm -S $aurpkgs
+[ ! -z "$aurpkgs" ] && trizen --noconfirm -S $aurpkgs
 
 cd /work/dev/personal/i3wmonarch && ./scripts/i3wm/create_symlinks.sh && git submodule update --init --recursive
 cd /work/dev/personal/i3wmonarch/github.com/nonpop/xkblayout-state && make
