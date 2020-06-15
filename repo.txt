@@ -1,6 +1,13 @@
 # grub
 grub
 os-prober
+mkinitcpio
+linux
+linux-headers
+linux-lts
+linux-lts-headers
+linux-firmware
+linux-api-headers
 
 # cli / tools / utilities
 android-tools
@@ -11,6 +18,7 @@ borg
 certbot
 cronie
 curl
+dhcpcd
 dialog
 dmidecode
 dnsmasq
@@ -72,7 +80,6 @@ zsh-syntax-highlighting
 
 # display / hotkeys / xorg
 xautomation
-xbindkeys
 xclip
 xorg-server
 xorg-xev
@@ -124,7 +131,6 @@ faenza-icon-theme
 gnome-icon-theme
 gnome-icon-theme-symbolic
 gnome-themes-extra
-gtk-xfce-engine
 hicolor-icon-theme
 kiconthemes
 lxappearance
@@ -132,7 +138,6 @@ lxde-icon-theme
 mate-icon-theme
 papirus-icon-theme
 sound-theme-freedesktop
-tangerine-icon-theme
 xcursor-themes
 xfwm4-themes
 
@@ -149,7 +154,6 @@ libvncserver
 maim
 parcellite
 pcmanfm
-pygtk
 redshift
 remmina
 rofi
