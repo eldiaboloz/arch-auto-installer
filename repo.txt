@@ -117,8 +117,6 @@ ttf-font-awesome
 ttf-hack
 ttf-liberation
 xorg-font-util
-xorg-font-utils
-xorg-fonts-alias
 xorg-fonts-encodings
 xorg-fonts-misc
 xorg-mkfontdir
