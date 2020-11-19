@@ -34,14 +34,7 @@ fi
 mountpoint -q "$AAI_MNT" || mount $AAI_PARTITION "$AAI_MNT"
 
 if [ "$AAI_MIRROR" == "yes" ]; then
-cat>/etc/pacman.d/mirrorlist << 'EOF'
-
-#  main server
-Server = http://mirrors.kernel.org/archlinux/$repo/os/$arch
-# local mirrors
-Server = http://mirror.telepoint.bg/archlinux/$repo/os/$arch
-Server = ftp://ftp.hosteurope.de/mirror/ftp.archlinux.org/$repo/os/$arch
-EOF
+cp "$curp/mirrorlist" /etc/pacman.d/mirrorlist
 fi
 
 if [ "$AAI_SKIP_INIT" == "no" ]; then
@@ -92,6 +85,9 @@ echo "fs.file-max=131072" >> /etc/sysctl.d/99-sysctl.conf
 echo "net.bridge.bridge-nf-call-ip6tables=0" >> /etc/sysctl.d/99-sysctl.conf
 echo "net.bridge.bridge-nf-call-iptables=0" >> /etc/sysctl.d/99-sysctl.conf
 echo "net.bridge.bridge-nf-call-arptables=0" >> /etc/sysctl.d/99-sysctl.conf
+
+# ensure br_netfilter module is loaded on boot so rules are applied correctly
+echo "br_netfilter" > /etc/modules-load.d/br-netfilter.conf
 
 # disable swap for now
 #fallocate -l 16G /swapfile
