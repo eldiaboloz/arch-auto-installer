@@ -17,18 +17,9 @@ else
 fi
 
 if [ "$AAI_FORMAT" -eq "1" ]; then
-    # format target device
-    (
-    echo o # Create a new empty DOS partition table
-    echo n # Add a new partition
-    echo p # Primary partition
-    echo 1 # Partition number
-    echo   # First sector (Accept default: 1)
-    echo   # Last sector (Accept default: varies)
-    echo w # Write changes
-    ) | fdisk $AAI_DEVICE
-
-    mkfs.ext4 $AAI_PARTITION
+    parted "$AAI_DEVICE" --script -- mklabel msdos
+    parted "$AAI_DEVICE" --script -- mkpart primary 0% 100%
+    mkfs.ext4 "$AAI_PARTITION"
 fi
 
 mountpoint -q "$AAI_MNT" || mount $AAI_PARTITION "$AAI_MNT"
