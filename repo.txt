@@ -8,6 +8,8 @@ linux-lts
 linux-lts-headers
 linux-firmware
 linux-api-headers
+amd-ucode
+intel-ucode
 
 # cli / tools / utilities
 android-tools

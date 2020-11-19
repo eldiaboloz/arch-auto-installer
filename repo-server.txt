@@ -1,3 +1,4 @@
+amd-ucode
 arch-install-scripts
 bash-completion
 bind-tools
@@ -23,6 +24,7 @@ gvfs-smb
 htop
 hwinfo
 iftop
+intel-ucode
 iotop
 iw
 jq
