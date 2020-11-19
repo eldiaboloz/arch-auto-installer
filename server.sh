@@ -18,7 +18,7 @@ fi
 if [ "$AAI_FORMAT" -eq "1" ]; then
     parted "$AAI_DEVICE" --script -- mklabel msdos
     parted "$AAI_DEVICE" --script -- mkpart primary 0% 100%
-    mkfs.ext4 "$AAI_PARTITION"
+    mkfs.ext4 -F "$AAI_PARTITION"
 fi
 
 mountpoint -q "$AAI_MNT" || mount $AAI_PARTITION "$AAI_MNT"
