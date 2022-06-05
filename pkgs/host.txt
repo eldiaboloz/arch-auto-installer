@@ -1,0 +1,11 @@
+acpi
+curl
+dmidecode
+hwinfo
+iw
+linux-api-headers
+linux-lts
+linux-lts-headers
+lm_sensors
+ntfs-3g
+wpa_supplicant

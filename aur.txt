@@ -1,4 +1,3 @@
 ttf-font-icons
 skypeforlinux-stable-bin
 jetbrains-toolbox
-xbindkeys
