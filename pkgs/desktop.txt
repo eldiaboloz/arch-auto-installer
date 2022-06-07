@@ -57,8 +57,9 @@ pcmanfm
 perl-anyevent-i3
 perl-libwww
 pkgfile
-ponymix
 pulseaudio-bluetooth
+python-gnupg
+python-pyotp
 redshift
 remmina
 rofi
